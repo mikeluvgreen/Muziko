@@ -1,110 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#A22BBA"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    android:gravity="center"
+    android:padding="16dp">
 
     <ImageView
         android:id="@+id/ivlogo"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_margin="100dp"
-        android:src="@drawable/logo"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/logo"/>
 
-    <TextView
-        android:id="@+id/tvHeader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="#A22BBA"
-        android:gravity="center"
-        android:text="MUZIKO MP3"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivlogo" />
 
     <EditText
-        android:id="@+id/edt_user"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:background="#a8ecdd"
-        android:drawableLeft="@drawable/ic_baseline_account_circle_24"
-        android:drawablePadding="8dp"
-        android:hint="User name"
-        android:padding="8dp"
-        android:textSize="20sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
-
-    <EditText
-        android:id="@+id/edt_pass"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:background="#a8ecdd"
-        android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
-        android:drawablePadding="4dp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="8dp"
-        android:textSize="20sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_user" />
-
-
-    <LinearLayout
+        android:id="@+id/utUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_pass"
-        app:layout_constraintVertical_bias="0.38">
+        android:hint="Username"/>
 
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:backgroundTint="#D1C6CA"
-            android:text="login"
-            android:textSize="15dp" />
-
-        <Button
-            android:id="@+id/btn_CreateAccount"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:backgroundTint="#827f75"
-            android:text="create account"
-            android:textSize="15dp" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tv_forgotpass"
-        android:layout_width="160dp"
-        android:layout_height="45dp"
-        android:text="Forgot Password?"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.019"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.814" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/utPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Password"/>
+    <EditText
+        android:id="@+id/utRePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Retype Password"/>
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:text="Register"/>
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Go to Login"/>
+</LinearLayout>

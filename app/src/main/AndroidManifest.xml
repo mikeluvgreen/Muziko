@@ -12,12 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Muziko"
-        tools:targetApi="31">
+        tools:targetApi="34">
         <activity
-            android:name=".InfoActivity"
+            android:name=".LibraryActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailActivity"
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -1,8 +1,8 @@
 package com.example.muziko;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,34 +12,34 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
-    Button login, createaccount;
-    EditText name, password;
+public class MainActivity extends Activity {
+    Button login, register;
+    EditText username, password, repassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        login = findViewById(R.id.btn_login);
-        createaccount = findViewById(R.id.btn_CreateAccount);
-        name = findViewById(R.id.edt_user);
-        password = findViewById(R.id.edt_pass);
+        //ánh xạ
+        login = findViewById(R.id.btnLogin);
+        register = findViewById(R.id.btnRegister);
+        username = findViewById(R.id.utUsername);
+        password = findViewById(R.id.utPassword);
+        repassword = findViewById(R.id.utRePassword);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String user = name.getText().toString().trim();
+                String user = username.getText().toString().trim();
                 String pass = password.getText().toString().trim();
-                Intent intent = new Intent(MainActivity.this,InfoActivity.class);
-                intent.putExtra("username",user);
-                intent.putExtra("password",pass);
+                Intent intent = new Intent(MainActivity.this, LibraryActivity.class);
+
                 startActivity(intent);
             }
         });
 
-        createaccount.setOnClickListener(new View.OnClickListener() {
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name.setText("");
+                username.setText("");
                 password.setText("");
             }
         });
@@ -48,15 +48,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu) {
         MenuInflater mn = getMenuInflater();
-        mn.inflate(R.menu.main_menu,menu);
+        mn.inflate(R.menu.mn_bottom,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId()==R.id.mnHome)
+        if (item.getItemId()==R.id.navMenu)
         {
-            Intent i = new Intent(this,DetailActivity.class);
+            Intent i = new Intent(this,RegisterActivity.class);
             startActivity(i);
         }
         return super.onOptionsItemSelected(item);
