@@ -14,7 +14,7 @@ import android.widget.EditText;
 
 public class MainActivity extends Activity {
     Button login, register;
-    EditText username, password, repassword;
+    EditText username, password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,14 +24,12 @@ public class MainActivity extends Activity {
         register = findViewById(R.id.btnRegister);
         username = findViewById(R.id.utUsername);
         password = findViewById(R.id.utPassword);
-        repassword = findViewById(R.id.utRePassword);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String user = username.getText().toString().trim();
                 String pass = password.getText().toString().trim();
-                Intent intent = new Intent(MainActivity.this, LibraryActivity.class);
-
+                Intent intent = new Intent(MainActivity.this, MediaPlayerActivity.class);
                 startActivity(intent);
             }
         });
@@ -39,8 +37,8 @@ public class MainActivity extends Activity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                username.setText("");
-                password.setText("");
+                Intent gotoRegister = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(gotoRegister);
             }
         });
     }

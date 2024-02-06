@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:title="Thư viện" android:id="@+id/mnLibrary" android:icon="@drawable/libraryicon"/>
+    <item android:title="Thư viện" android:id="@+id/mnLibrary" android:icon="@drawable/library"/>
     <item android:title="Khám phá" android:id="@+id/mnExplore" android:icon="@drawable/explore"/>
-    <item android:title="Cá nhân" android:id="@+id/mnSetting"/>
-
-
+    <item android:title="Cá nhân" android:id="@+id/mnSetting" android:icon="@drawable/user"/>
 </menu>

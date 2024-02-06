@@ -8,13 +8,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class RegisterActivity extends AppCompatActivity {
-    TextView user,pass;
+    TextView user,pass,retypepass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        user=findViewById(R.id.utUsername);
-        pass=findViewById(R.id.utPassword);
+        user = findViewById(R.id.utUsername);
+        pass = findViewById(R.id.utPassword);
+        retypepass = findViewById(R.id.utRePassword);
 
         Bundle bundle = getIntent().getExtras();
         String username = bundle.getString("username");

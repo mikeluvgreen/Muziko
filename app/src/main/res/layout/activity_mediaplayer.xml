@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".MediaPlayerActivity">
+<TextView
+    android:id="@+id/tvTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Tên bài hát"
+    android:textColor="#fff"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    android:textAlignment="center"
+    />
+
+
+    <ImageView
+        android:id="@+id/imgDisc"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/compactdisc" />
+
+
+    <SeekBar
+    android:id="@+id/seekBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="500dp"/>
+
+<TextView
+    android:id="@+id/tvTimeSong"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="00:00"
+    android:textColor="#fff"
+    android:textSize="20sp"
+    android:layout_alignLeft="@+id/seekBar"
+    android:layout_alignStart="@+id/seekBar"
+    android:layout_marginTop="450dp"
+    />
+
+    <TextView
+        android:id="@+id/tvTimeTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_alignLeft="@+id/seekBar"
+        android:layout_marginStart="311dp"
+        android:layout_marginLeft="311dp"
+        android:layout_marginTop="450dp"
+        android:text="00:00"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/Buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:padding="5dp">
+        
+        <ImageButton
+            android:id="@+id/btn_Prev"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/prev64"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            />
+        <ImageButton
+            android:id="@+id/btn_Play"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play64"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+        <ImageButton
+            android:id="@+id/btn_Pause"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/restart64"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            />
+        <ImageButton
+            android:id="@+id/btn_Forward"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/forward64"
+            android:layout_marginRight="10dp"
+            />
+</LinearLayout>
+</RelativeLayout>
